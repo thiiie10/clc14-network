@@ -18,9 +18,9 @@ resource "aws_flow_log" "example" {
   log_destination_type = "s3"
   traffic_type         = "ALL"
   vpc_id               = aws_vpc.minha_vpc.id
-}
+}  
 
-}
+
 # Correcao segunda issue
 resource "aws_default_security_group" "default" {
   vpc_id = aws_vpc.minha_vpc.id
@@ -28,7 +28,7 @@ resource "aws_default_security_group" "default" {
   tags = {
     Name = "my-iac-sg"
   }
-
+}
 
 ## Cria subnet privada na us-east-1a
 resource "aws_subnet" "private_subnet_1a" {
